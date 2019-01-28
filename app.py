@@ -11,6 +11,13 @@ allowed_password = ["123"]
 def index():
     return render_template("index.html")
 
+@app.route('/news')
+def news():
+    return render_template("news.html")
+
+@app.route('/profile')
+def profile():
+    return render_template('profile.html')
 
 @app.route('/login', methods=["POST", "GET"])
 def login():
