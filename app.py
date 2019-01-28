@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 
 app = Flask(__name__)
 
@@ -9,6 +9,10 @@ allowed_password = ["123"]
 @app.route('/')
 def index():
     return render_template("index.html")
+
+@app.route('/inner/<email>')
+def inner(email):
+    return render_template("index_innerpage.html", email=email)
 
 
 @app.route('/news')
@@ -32,7 +36,7 @@ def login():
     global allowed_password
 
     if email in allowed_email and password in allowed_password:
-        return render_template("index_innerpage.html", email=email  )
+        return redirect('/inner/' + email)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,15 @@
+next steps:
+data management
+    sql implement
+        login
+        register
+        profile
+style
+    css implement
+
+action page
+    csotthon
+        nyitás -- button
+        lámpa on/off
+logout
+    redirect to index page
