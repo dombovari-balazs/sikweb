@@ -9,9 +9,6 @@ ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
-allowed_email = ["asd@asd.hu"]
-allowed_password = ["123"]
-
 
 def allowed_file(filename):
     return '.' in filename and \
@@ -73,10 +70,8 @@ def login():
 
     email = request.form.get('email')
     password = request.form.get('password')
-    global allowed_email
-    global allowed_password
 
-    if email in allowed_email and password in allowed_password:
+    if data_manager.email_validator(email) and data_manager.password_validator(password):
         return redirect('/inner/' + email)
 
 
