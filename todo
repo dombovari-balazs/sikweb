@@ -11,5 +11,11 @@ action page
     csotthon
         nyitás -- button
         lámpa on/off
-logout
+
+logout --
     redirect to index page
+
+gallery
+    upload
+    list uploaded pictures
+    -BUG: Back doesn't work. goes back, with email. It's not okay.

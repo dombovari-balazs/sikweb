@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+</head>
+<body>
+<h2>This is the Gallery</h2>
+<p><a href="/inner/{{ email }}">Back</a></p>
+<p><a href="/upload">Upload</a></p>
+
+<img src="{{ url_for('static', filename='images/x-3.png') }}">
+
+
+{% for item in files %}
+<img src="{{ url_for('static', filename=item) }}">
+
+{% endfor %}
+</body>
+</html>
