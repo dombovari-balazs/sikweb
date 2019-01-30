@@ -16,9 +16,11 @@ logout --
     redirect to index page
 
 login
-    data_manager.py should do it.
+    data_manager.py should do it. -- done
 
 gallery
     upload --done
     list uploaded pictures --50%, not all, just specific items
     -BUG: Back doesn't work. goes back, with email. It's not okay, on the long run.
+    set up picture size
+    set, that they show up in some order... :D

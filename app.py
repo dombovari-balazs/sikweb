@@ -14,7 +14,7 @@ def allowed_file(filename):
     return '.' in filename and \
            filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-
+0
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -49,7 +49,6 @@ def upload_file():
 @app.route('/gallery')
 def gallery():
     files = data_manager.get_file_names()
-    print(files)
     return render_template('gallery.html', files=files)
 
 
