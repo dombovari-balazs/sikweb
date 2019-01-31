@@ -4,6 +4,11 @@ data management
         login
         register
         profile
+
+        log:
+        1. the database is online.
+        2. I can now get data from the database with python code
+
 style
     css implement
 
